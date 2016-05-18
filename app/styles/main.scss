@@ -1,0 +1,99 @@
+// bower:scss
+// endbower
+@import "partial/meyer-reset";
+$primaryColor: #2196F3;
+$lighterColor: #fff;
+$lighterColorD1: #e0e0e0;
+$lighterFontColor: #767676;
+$darkFontColor: #333;
+$canvasSelector: "[tt-canvas]";
+$navSelector: "[tt-nav]";
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+.clearfix{
+  &:before,&:after{
+    display: table;
+    content: " ";
+  }
+  &:after{
+    clear: both;
+  }
+}
+body{
+  background: $primaryColor;
+  color: $lighterColor;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+div#{$canvasSelector} {
+  background: #fff;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+  .sidebar-header{
+    color: $lighterFontColor;
+    padding: 15px;
+    border-bottom: 1px solid $lighterFontColor;
+    margin-bottom: 20px;
+    h3{
+      font-size: 24px;
+    }
+  }
+  .sidebar-menu{
+    ul {
+      li {
+        a {
+          font-size: 16px;
+          font-weight: 700;
+          color: $darkFontColor;
+          text-decoration: none;
+          padding: 10px 15px;
+          display: block;
+          i{
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .sidebar-footer{
+    background: $lighterColorD1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    ul{
+      @extend .clearfix;
+      width: 100%;
+      display: block;
+      li{
+        display: block;
+        width: 33.33333333333%;
+        position: relative;
+        float: left;
+        a{
+          display: block;
+          text-align: center;
+          font-size: 18px;
+          padding: 10px;
+          color: $darkFontColor;
+          border-right: 1px solid $lighterFontColor;
+        }
+        &:last-child{
+          a{
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+}

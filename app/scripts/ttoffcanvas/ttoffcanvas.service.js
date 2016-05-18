@@ -1,6 +1,7 @@
 /**
  * Created by shovon-pc on 5/18/2016.
  */
+'use strict';
 angular.module('tt.Offcanvas')
   .factory('ttConfigData',function(){
     var initTt = {

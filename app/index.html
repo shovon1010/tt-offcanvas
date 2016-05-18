@@ -20,22 +20,29 @@
     <!--[if lte IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="content-wrapper" ng-controller="mainCtrl">
-      <div tt-canvas="" ng-class="{'active': ocStatus}"></div>
+    <div class="tt-content-wrapper">
+      <div tt-canvas="" ng-class="{'is-active': ocStatus}"></div>
       <div tt-nav=""></div>
+      <div class="intro-section">
+        <h2>true teeth</h2>
+        <h3>off-canvas</h3>
+      </div>
+      <p class="app-meta">Developed by Shovon1010</p>
     </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/jQuery/dist/jquery.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/ttoffcanvas.js -->
     <script src="scripts/ttoffcanvas/ttoffcanvas.module.js"></script>
     <script src="scripts/ttoffcanvas/ttoffcanvas.service.js"></script>
     <script src="scripts/ttoffcanvas/ttoffcanvas.ctrl.js"></script>
+    <script src="scripts/ttoffcanvas/ttoffcanvas.directive.js"></script>
     <!-- endbuild -->
 </body>
 </html>

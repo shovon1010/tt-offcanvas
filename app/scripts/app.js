@@ -8,9 +8,4 @@
  *
  * Main module of the application.
  */
-angular
-  .module('app', ['tt.Offcanvas']);
-angular.module('app')
-.controller('mainCtrl',function($scope,ttConfigData){
-  $scope.initTt = ttConfigData;
-});
+angular.module('app', ['tt.Offcanvas']);
